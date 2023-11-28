@@ -11,7 +11,7 @@ app.use(express.static("public"));
 
 //Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 //Routes
 app.use("/api/v1", projectsRouter);
